@@ -9,9 +9,9 @@ export default {};
 </script>
 <style lang="scss">
 p {
-  color: blue;
+  color: red;
   a {
-    color: red;
+    color: blue;
   }
 }
 </style>
