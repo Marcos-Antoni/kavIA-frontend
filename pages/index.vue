@@ -1,6 +1,8 @@
 <template>
   <div>
+    <header></header>
     <p>hola <a href="#">mundo</a></p>
+    <footer></footer>
   </div>
 </template>
 
@@ -9,9 +11,9 @@ export default {};
 </script>
 <style lang="scss">
 p {
-  color: blue;
+  color: red;
   a {
-    color: red;
+    color: blue;
   }
 }
 </style>
