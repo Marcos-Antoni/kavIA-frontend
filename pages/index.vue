@@ -1,17 +1,20 @@
 <template>
   <div>
-    <p>hola <a href="#">mundo</a></p>
+    <section id="inicio">
+      <inicio class="contenedor" />
+    </section>
   </div>
 </template>
 
 <script>
+import inicio from "../components/inicio/inicio";
 export default {};
 </script>
 <style lang="scss">
-p {
-  color: red;
-  a {
-    color: blue;
+#inicio {
+  height: 100%;
+  .contenedor {
+    height: 100%;
   }
 }
 </style>
