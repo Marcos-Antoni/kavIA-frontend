@@ -24,9 +24,31 @@ export default {};
   --titulo: "Galano";
   --contenido: "Helveltica";
 
+  // globales
+  --desaparecer-en-celulares: block;
+
   // inicio
   --subrayado: 0;
   --tamano-de-globos: 75px;
+  --tamano-de-titulo-e-input: 40%;
+
+  /* md */
+  @media screen and (max-width: 1264px) {
+    --alinear-lista-de-inicio: none;
+  }
+  /* sm */
+  @media screen and (max-width: 960px) {
+    // inicio
+    --tamano-de-titulo-e-input: 60%;
+    --alinear-lista-de-inicio: center;
+
+    // globales
+    --desaparecer-en-celulares: none;
+  }
+  @media screen and (max-width: 600px) {
+    // inicio
+    --tamano-de-titulo-e-input: 70%;
+  }
 }
 
 /* estilos */

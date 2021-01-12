@@ -3,7 +3,7 @@
     <v-row no-gutters class="priemra-bista">
       <v-col cols="12" align-self="end" class="columna1">
         <v-row no-gutters>
-          <v-col sm="5" md="3" class="navegacion">
+          <v-col sm="12" md="4" class="navegacion">
             <nav>
               <ul class="lista">
                 <li id="seleccionado">Para Empresas</li>
@@ -12,10 +12,11 @@
             </nav>
           </v-col>
 
-          <v-col sm="6" md="6" class="boton">
-            <v-btn block class="btn"
-              >Obtén 100$ totalmente gratis para nuevos usuarios</v-btn
-            >
+          <v-col sm="6" md="4" class="boton">
+            <v-btn block class="btn">
+              Obtén 100$ totalmente gratis para nuevos usuarios
+              <v-icon right>mdi-close</v-icon>
+            </v-btn>
           </v-col>
         </v-row>
       </v-col>
@@ -37,6 +38,7 @@
             :label="ejemplo_Iput"
             :placeholder="ejemplo_Iput"
             solo
+            append-icon="mdi-magnify"
           ></v-text-field>
         </form>
       </v-col>
@@ -61,9 +63,12 @@ export default {
 /* mixins */
 
 .inicio {
+  width: 100%;
   .columna1 {
     height: 10%;
     .boton {
+      display: var(--desaparecer-en-celulares);
+      margin-right: 100px;
       .btn {
         background-color: var(--color-azul);
         border-radius: 0;
@@ -80,14 +85,18 @@ export default {
       display: flex;
       align-items: flex-end;
       nav {
+        display: flex;
+        justify-content: var(--alinear-lista-de-inicio);
         width: 100%;
         .lista {
           width: 90%;
           display: flex;
+          justify-content: var(--alinear-lista-de-inicio);
           align-items: flex-end;
 
           list-style-type: none;
           li {
+            cursor: pointer;
             display: inline-block;
             width: auto;
             margin-left: 20px;
@@ -122,30 +131,29 @@ export default {
       position: absolute;
       width: var(--tamano-de-globos);
       height: var(--tamano-de-globos);
-      transition-property: left;
-      transition-property: top;
-      transition-duration: 55s;
+      transition: margin 2s linear;
     }
     .globo1 {
       background: url("../../static/inicio/globo1.svg");
-      background-size: 50px;
       background-repeat: no-repeat;
-      &:hover {
-        top: 50px;
-        left: 20px;
-      }
+      background-size: 75px;
+      left: 10%;
+      top: 30%;
     }
+
     .globo2 {
       background: url("../../static/inicio/globo2.svg");
-      background-size: 50px;
+      background-size: 30px;
       background-repeat: no-repeat;
-      left: 10%;
+      left: 25%;
+      top: 35%;
     }
     .globo3 {
       background: url("../../static/inicio/globo3.svg");
-      background-size: 50px;
+      background-size: 75px;
       background-repeat: no-repeat;
-      left: 20%;
+      left: 80%;
+      top: 55%;
     }
 
     .centrar {
@@ -159,20 +167,28 @@ export default {
       text-align: center;
       p {
         width: auto;
-        width: 40%;
+        width: var(--tamano-de-titulo-e-input);
       }
       h2 {
         width: auto;
-        width: 40%;
+        width: var(--tamano-de-titulo-e-input);
+        font-size: 35px;
       }
     }
     .formulario {
       height: auto;
       margin-top: 20px;
       .input {
-        width: 40%;
+        width: var(--tamano-de-titulo-e-input);
       }
     }
+  }
+  .columna3 {
+    height: 20%;
+
+    background: url("../../static/inicio/ciudad.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
   }
 }
 </style>

@@ -1,7 +1,10 @@
-# COMPONENTS
+tamaños
 
-**This directory is not required, you can delete it if you don't want to use it.**
+celulares
+xs-500px <600px
+600px> sm-780px <960px
 
-The components directory contains your Vue.js Components.
-
-_Nuxt.js doesn't supercharge these components._
+pc
+960px> md-1112 <1264px
+1264px> lg-1584 <1904px
+1904px> xl-1904
