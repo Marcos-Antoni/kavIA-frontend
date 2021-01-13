@@ -1,14 +1,17 @@
 <template>
   <div class="principal">
-    <section id="inicio">
-      <inicio class="contenedor" />
+    <section id="inicio" class="contenedor">
+      <Inicio class="contenedor" />
     </section>
-    <section id="clientes"></section>
+    <section id="mas-vendidios">
+      <Popular class="contenedor" />
+    </section>
   </div>
 </template>
 
 <script>
-import inicio from "../components/inicio/inicio";
+import Inicio from "../components/inicio/Inicio";
+import Popular from "../components/inicio/Popular";
 export default {};
 </script>
 <style lang="scss">
@@ -21,6 +24,10 @@ export default {};
   }
   #inicio {
     height: 100%;
+  }
+  #mas-vendidios {
+    min-height: 110%;
+    height: auto;
   }
 }
 </style>

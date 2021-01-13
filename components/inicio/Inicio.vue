@@ -49,6 +49,7 @@
 </template>
 <script>
 export default {
+  name: "Inicio",
   data() {
     return {
       /* priemra-bista */
@@ -188,7 +189,7 @@ export default {
 
     background: url("../../static/inicio/ciudad.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: var(--tamano-de-ciudad);
   }
 }
 </style>
