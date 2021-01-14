@@ -6,12 +6,16 @@
     <section id="mas-vendidios">
       <Popular class="contenedor" />
     </section>
+    <section id="usuarios-destacados">
+      <Usuarios class="contenedor" />
+    </section>
   </div>
 </template>
 
 <script>
 import Inicio from "../components/inicio/Inicio";
 import Popular from "../components/inicio/Popular";
+import Usuarios from "../components/inicio/Usuarios";
 export default {};
 </script>
 <style lang="scss">
@@ -26,7 +30,9 @@ export default {};
     height: 100%;
   }
   #mas-vendidios {
-    min-height: 110%;
+    height: auto;
+  }
+  #usuarios-destacados {
     height: auto;
   }
 }

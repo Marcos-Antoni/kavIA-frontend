@@ -12,10 +12,18 @@
           sm="6"
           cols="12"
         >
-          <v-card class="obgeto-de-lista">
+          <v-card class="obgeto-de-lista liston">
+            <div :class="obgeto.verificar ? `verificar` : `desaparecer`">
+              <v-icon color="red lighten-5">mdi-check</v-icon>
+            </div>
+
             <v-container>
               <div class="titulo-del-obgeto">
-                <div class="imagen-del-desarrollador"></div>
+                <img
+                  src="../../static/inicio/usuario.png"
+                  class="imagen-del-desarrollador"
+                />
+
                 <h3 class="titulo titulo-h3">{{ obgeto.titulo }}</h3>
               </div>
               <div class="descripcon-del-obgeto">
@@ -49,7 +57,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: "true"
         },
         {
           img: "",
@@ -57,7 +66,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: true
         },
         {
           img: "",
@@ -65,7 +75,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: false
         },
         {
           img: "",
@@ -73,7 +84,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: true
         },
         {
           img: "",
@@ -81,7 +93,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: false
         },
         {
           img: "",
@@ -89,7 +102,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: false
         },
         {
           img: "",
@@ -97,7 +111,8 @@ export default {
           descripcion:
             "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
           puntuacion: 8.9,
-          precio: 0.05
+          precio: 0.05,
+          verificar: false
         }
       ]
     };
@@ -110,6 +125,19 @@ export default {
   width: 100%;
   margin-top: 20px;
 
+  .liston {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 10%;
+      height: 15%;
+      background-image: url("../../static/liston.svg");
+      top: 0;
+      right: 10%;
+    }
+  }
+
   .lista-de-populares {
     padding: 20px 7%;
 
@@ -120,6 +148,21 @@ export default {
         height: 100%;
         width: 100%;
 
+        .verificar {
+          position: absolute;
+          display: block;
+          text-align: center;
+          background-color: var(--color-azul);
+          width: var(--tamano-de-verificado);
+          height: var(--tamano-de-verificado);
+          border-radius: 50%;
+          left: -3%;
+          top: -3%;
+          color: #ffffff;
+        }
+        .desaparecer {
+          display: none;
+        }
         .titulo-del-obgeto {
           height: 30%;
           display: flex;

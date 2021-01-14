@@ -18,49 +18,6 @@ export default {};
 <style lang="scss">
 @import "../assets/_variables.scss";
 
-/* variables */
-:root {
-  // globales
-  --color-azul: #406aff;
-  --titulo: "Galano";
-  --contenido: "Helveltica";
-
-  // inicio
-  --subrayado: 0;
-  --tamano-de-globos: 75px;
-  --tamano-de-titulo-e-input: 40%;
-
-  /* lg */
-  @media screen and (max-width: 1904px) {
-    /* populares */
-    --tamano-de-ciudad: 1904px;
-  }
-  /* md */
-  @media screen and (max-width: 1264px) {
-    /* populares */
-    --tamano-de-ciudad: auto;
-
-    /* inicio */
-    --alinear-lista-de-inicio: none;
-
-    // globales
-    --desaparecer-en-celulares: block;
-  }
-  /* sm */
-  @media screen and (max-width: 960px) {
-    // inicio
-    --tamano-de-titulo-e-input: 60%;
-    --alinear-lista-de-inicio: center;
-
-    // globales
-    --desaparecer-en-celulares: none;
-  }
-  @media screen and (max-width: 600px) {
-    // inicio
-    --tamano-de-titulo-e-input: 70%;
-  }
-}
-
 /* estilos */
 * {
   @include contenido();

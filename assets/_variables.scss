@@ -26,3 +26,68 @@
 @mixin contenido {
   font-family: "Helveltica";
 }
+
+/* variables */
+:root {
+  // globales
+  --color-azul: #406aff;
+  --titulo: "Galano";
+  --contenido: "Helveltica";
+
+  // inicio
+  --subrayado: 0;
+  --tamano-de-globos: 75px;
+  --tamano-de-titulo-e-input: 40%;
+
+  /* populares */
+  --tamano-de-verificado: 25px;
+
+  /* usuarios */
+  --tamano-de-palos-svg: 100px;
+  --ubicacion-de-cuadrados: -8%;
+  --ubicacion-de-palos-y: 20%;
+
+  /* lg */
+  @media screen and (max-width: 1904px) {
+    /* populares */
+    --tamano-de-ciudad: 1904px;
+  }
+  /* md */
+  @media screen and (max-width: 1264px) {
+    /* populares */
+    --tamano-de-ciudad: auto;
+
+    /* inicio */
+    --alinear-lista-de-inicio: none;
+
+    // globales
+    --desaparecer-en-celulares: block;
+
+    /* usuarios */
+    --tamano-de-imagen-de-usuario-x: 10rem;
+    --tamano-de-imagen-de-usuario-y: 6.5rem;
+    --ubicacion-de-palos-y: 20%;
+  }
+  /* sm */
+  @media screen and (max-width: 960px) {
+    // inicio
+    --tamano-de-titulo-e-input: 60%;
+    --alinear-lista-de-inicio: center;
+
+    // globales
+    --desaparecer-en-celulares: none;
+
+    /* usuarios */
+    --tamano-de-imagen-de-usuario-x: 8rem;
+    --tamano-de-imagen-de-usuario-y: 5rem;
+    --ubicacion-de-palos-y: 10%;
+  }
+  /* xs */
+  @media screen and (max-width: 600px) {
+    // inicio
+    --tamano-de-titulo-e-input: 70%;
+
+    /* usuario */
+    --ubicacion-de-palos-y: 18%;
+  }
+}
