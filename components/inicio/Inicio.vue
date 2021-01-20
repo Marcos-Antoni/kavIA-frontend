@@ -67,6 +67,7 @@ export default {
   width: 100%;
   .columna1 {
     height: 10%;
+    margin-bottom: 30px;
     .boton {
       display: var(--desaparecer-en-celulares);
       margin-right: 100px;
@@ -185,7 +186,8 @@ export default {
     }
   }
   .columna3 {
-    height: 20%;
+    margin-top: 50px;
+    height: 110px;
 
     background: url("../../static/inicio/ciudad.svg");
     background-repeat: no-repeat;

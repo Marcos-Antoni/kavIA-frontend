@@ -28,6 +28,7 @@ export default {};
   }
   #inicio {
     height: 100%;
+    margin-bottom: 100px;
   }
   #mas-vendidios {
     height: auto;
