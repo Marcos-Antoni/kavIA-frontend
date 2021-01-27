@@ -3,7 +3,6 @@
     <div :class="obgeto.verificar ? `verificar` : `desaparecer`">
       <v-icon color="red lighten-5">mdi-check</v-icon>
     </div>
-
     <v-container>
       <div class="titulo-del-obgeto">
         <img

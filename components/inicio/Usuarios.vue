@@ -21,6 +21,11 @@
 </template>
 
 <style lang="scss">
+@mixin cuadricula {
+  height: var(--tamano-de-cuadricula);
+  width: var(--tamano-de-cuadricula);
+}
+
 .usuarisos {
   height: 100%;
   position: relative;
@@ -44,7 +49,7 @@
     height: var(--tamano-de-palos-svg);
     width: var(--tamano-de-palos-svg);
     bottom: -25%;
-    right: -2%;
+    right: -14px;
   }
 
   .lista-de-usuarios {
@@ -58,8 +63,7 @@
         display: block;
         content: "";
         background-image: url("../../static/fondo1.svg");
-        height: 100px;
-        width: 100px;
+        @include cuadricula();
         top: var(--ubicacion-de-cuadrados);
         left: var(--ubicacion-de-cuadrados);
       }
@@ -71,8 +75,7 @@
         display: block;
         content: "";
         background-image: url("../../static/fondo1.svg");
-        height: 100px;
-        width: 100px;
+        @include cuadricula();
         bottom: var(--ubicacion-de-cuadrados);
         right: var(--ubicacion-de-cuadrados);
       }

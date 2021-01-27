@@ -9,6 +9,9 @@
     <section id="usuarios-destacados">
       <Usuarios class="contenedor" />
     </section>
+    <section id="integracion">
+      <Integracion class="contenedor" />
+    </section>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
 import Inicio from "../components/inicio/Inicio";
 import Popular from "../components/inicio/Popular";
 import Usuarios from "../components/inicio/Usuarios";
+import Integracion from "../components/inicio/Integracion";
 export default {};
 </script>
 <style lang="scss">
@@ -35,6 +39,11 @@ export default {};
   }
   #usuarios-destacados {
     height: auto;
+  }
+  #integracion {
+    margin-top: 50px;
+    height: auto;
+    margin-bottom: 25px;
   }
 }
 </style>

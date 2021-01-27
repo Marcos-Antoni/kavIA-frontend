@@ -31,22 +31,29 @@
 :root {
   // globales
   --color-azul: #406aff;
+  --color-azul-2: #40c9ff;
   --titulo: "Galano";
   --contenido: "Helveltica";
+  --tamano-h2-targeta-decorativa: 18px;
 
   // inicio
   --subrayado: 0;
   --tamano-de-globos: 75px;
   --tamano-de-titulo-e-input: 40%;
   --tamano-de-ciudad: auto;
+  --ubicacion-de-cuadrados: -8%;
+  --tamano-de-cuadricula: 100px;
 
   /* populares */
   --tamano-de-verificado: 30px;
 
   /* usuarios */
   --tamano-de-palos-svg: 100px;
-  --ubicacion-de-cuadrados: -8%;
   --ubicacion-de-palos-y: 20%;
+
+  /* integracion */
+  --tamano-de-la-integracion-columnas: 1000px;
+  --tamano-de-la-integracion: none;
 
   /* lg */
   @media screen and (max-width: 1904px) {
@@ -60,7 +67,7 @@
     --alinear-lista-de-inicio: none;
 
     // globales
-    --desaparecer-en-celulares: block;
+    --desaparecer-en-celulares: flex;
 
     /* usuarios */
     --tamano-de-imagen-de-usuario-x: 10rem;
@@ -75,11 +82,17 @@
 
     // globales
     --desaparecer-en-celulares: none;
+    --desaparecer-en-celulares-pequenos: flex;
+    --tamano-letra-targeta-decorativa: 13px;
 
     /* usuarios */
     --tamano-de-imagen-de-usuario-x: 8rem;
     --tamano-de-imagen-de-usuario-y: 5rem;
     --ubicacion-de-palos-y: 10%;
+
+    /* integracion */
+    --tamano-de-la-integracion-columnas: auto;
+    --tamano-de-la-integracion: 800px;
   }
   /* xs */
   @media screen and (max-width: 600px) {
@@ -88,5 +101,8 @@
 
     /* usuario */
     --ubicacion-de-palos-y: 18%;
+
+    /* globales */
+    --desaparecer-en-celulares-pequenos: none;
   }
 }
