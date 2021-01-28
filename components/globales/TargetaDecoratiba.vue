@@ -1,15 +1,13 @@
 <template>
   <div class="tergeta-decoratiba">
     <h2>{{ titulo }}</h2>
-    <nuxt-link :to="url">
-      <a :href="url">leer docuementación --></a>
-    </nuxt-link>
+    <nuxt-link :to="url" class="link"> {{ contenido }} </nuxt-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["titulo", "informacion", "url"]
+  props: ["titulo", "contenido", "url"]
 };
 </script>
 
@@ -29,9 +27,9 @@ export default {
     font-size: 18px;
     width: 75%;
   }
-  a {
+  .link {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     color: #fff;
     margin-top: 100px;
     font-size: 18px;

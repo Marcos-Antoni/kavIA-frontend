@@ -7,12 +7,13 @@
           v-for="i in 4"
           :key="i"
           class="columnas"
-          cols="6"
+          cols="12"
+          ms="6"
           md="3"
           :class="`cuadrado${i}`"
         >
           <v-card class="fondo">
-            <img :src="`/_nuxt/static/inicio/empres${i}.png`" />
+            <img :src="`/inicio/empres${i}.png`" />
           </v-card>
         </v-col>
       </v-row>

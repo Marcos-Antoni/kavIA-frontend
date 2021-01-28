@@ -12,6 +12,9 @@
     <section id="integracion">
       <Integracion class="contenedor" />
     </section>
+    <section id="automatizar">
+      <Automatiza class="contenedor" />
+    </section>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ import Inicio from "../components/inicio/Inicio";
 import Popular from "../components/inicio/Popular";
 import Usuarios from "../components/inicio/Usuarios";
 import Integracion from "../components/inicio/Integracion";
+import Automatiza from "../components/inicio/Automatiza";
 export default {};
 </script>
 <style lang="scss">
@@ -44,6 +48,9 @@ export default {};
     margin-top: 50px;
     height: auto;
     margin-bottom: 25px;
+  }
+  #automatizar {
+    height: auto;
   }
 }
 </style>

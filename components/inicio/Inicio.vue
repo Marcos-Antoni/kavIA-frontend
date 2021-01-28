@@ -64,7 +64,6 @@ export default {
 /* mixins */
 
 .inicio {
-  width: 100%;
   .columna1 {
     height: 10%;
     margin-bottom: 30px;

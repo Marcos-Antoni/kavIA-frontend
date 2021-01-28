@@ -4,9 +4,7 @@
       <v-row class="filas">
         <v-col class="columnas " md="3" sm="12" cols="12">
           <div class="info">
-            <h2>
-              Fácil integración con la plaforma
-            </h2>
+            <h2>Fácil integración con la plaforma</h2>
             <p>
               Puedes usar nuestra interfaz gráfica con la cual se te hará muy
               sencillo consumir el servicio o lo puedes integrar via API ;)
@@ -56,78 +54,13 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Targetas from "../globales/Targetas";
 import TargetaDecoratiba from "../globales/TargetaDecoratiba";
 export default {
   components: { TargetaDecoratiba },
-  data() {
-    return {
-      listPopulares: [
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: "true"
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: true
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: false
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: true
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: false
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: false
-        },
-        {
-          img: "",
-          titulo: "veríficacion tarjeta de credito",
-          descripcion:
-            "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
-          puntuacion: 8.9,
-          precio: 0.05,
-          verificar: false
-        }
-      ]
-    };
+  computed: {
+    ...mapState(["listPopulares"])
   }
 };
 </script>
