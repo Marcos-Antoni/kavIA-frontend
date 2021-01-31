@@ -17,4 +17,7 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# nota
+
+el "npm run devHost" puede ocacionar errores a algunas pc,
+si a usted le pasa esto porfabor use "npm run dev"

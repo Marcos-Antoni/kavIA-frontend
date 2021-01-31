@@ -15,6 +15,9 @@
     <section id="automatizar">
       <Automatiza class="contenedor" />
     </section>
+    <section id="desarroyadores">
+      <BucarDesarroyadores class="contenedor" />
+    </section>
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import Popular from "../components/inicio/Popular";
 import Usuarios from "../components/inicio/Usuarios";
 import Integracion from "../components/inicio/Integracion";
 import Automatiza from "../components/inicio/Automatiza";
+import BucarDesarroyadores from "../components/inicio/BucarDesarroyadores";
 export default {};
 </script>
 <style lang="scss">
@@ -50,6 +54,10 @@ export default {};
     margin-bottom: 25px;
   }
   #automatizar {
+    height: auto;
+    margin-bottom: 75px;
+  }
+  #desarroyadores {
     height: auto;
   }
 }

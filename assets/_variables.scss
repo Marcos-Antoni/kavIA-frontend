@@ -1,7 +1,9 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+//Nota inportante todas las variables de cada pagina de la aplicacion estaran enserradas en "//"
+// y las variables de los componentes  unicos de cada pagina seran "/*  */"
+// esto solo sera en la parte de arriba antes "@media screen" alli se pierde el orden
+// si te preguntas porque es por que me dio pereza xD
+// si tu quieres ordenarlo haslo y borra esa parte gracias :D
+// todas las variables de componentes que se usan en mas de una pigina iran a globales directamente
 
 /* letras */
 @font-face {
@@ -37,6 +39,7 @@
   --tamano-h2-targeta-decorativa: 18px;
 
   // inicio
+  /* inicio */
   --subrayado: 0;
   --tamano-de-globos: 75px;
   --tamano-de-titulo-e-input: 40%;
@@ -59,6 +62,9 @@
   --tamano-de-palos-de-libro: 24px;
   --ubicacion-de-palos-de-libro: -24px;
 
+  /* desarrolladores */
+  // fin inicio
+
   /* lg */
   @media screen and (max-width: 1904px) {
     /* inicio */
@@ -66,17 +72,22 @@
   }
   /* md */
   @media screen and (max-width: 1264px) {
+    // globales
+    --desaparecer-en-celulares: flex;
+    --pading-header: 50px;
+    --margin-de-botones-de-header: 20px;
+
     /* inicio */
     --tamano-de-ciudad: auto;
     --alinear-lista-de-inicio: none;
-
-    // globales
-    --desaparecer-en-celulares: flex;
 
     /* usuarios */
     --tamano-de-imagen-de-usuario-x: 10rem;
     --tamano-de-imagen-de-usuario-y: 6.5rem;
     --ubicacion-de-palos-y: 20%;
+
+    /* desarrolladores */
+    --tamano-de-carta: 250px;
   }
   /* sm */
   @media screen and (max-width: 960px) {
@@ -88,6 +99,8 @@
     --desaparecer-en-celulares: none;
     --desaparecer-en-celulares-pequenos: flex;
     --tamano-letra-targeta-decorativa: 13px;
+    --pading-header: 5px;
+    --margin-de-botones-de-header: 5px;
 
     /* usuarios */
     --tamano-de-imagen-de-usuario-x: 8rem;
@@ -97,6 +110,9 @@
     /* integracion */
     --tamano-de-la-integracion-columnas: auto;
     --tamano-de-la-integracion: 800px;
+
+    /* desarrolladores */
+    --tamano-de-carta: auto;
   }
   /* xs */
   @media screen and (max-width: 600px) {

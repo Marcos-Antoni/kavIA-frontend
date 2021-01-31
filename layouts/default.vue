@@ -1,17 +1,12 @@
 <template>
   <div class="contenedor">
-    <header class="header">
-      <v-row>
-        <v-col cols="12" class="columna">
-          <p>header</p>
-        </v-col>
-      </v-row>
-    </header>
+    <HeaderV class="header" />
     <nuxt class="nuxt" />
   </div>
 </template>
 
 <script>
+import HeaderV from "../components/header/HeaderV";
 export default {};
 </script>
 
@@ -27,6 +22,7 @@ export default {};
   h2 {
     @include titulo;
   }
+  list-style-type: none;
 }
 .titulo {
   @include titulo;
@@ -52,18 +48,8 @@ body {
 }
 
 .contenedor {
-  .header {
-    margin: 0;
-    height: 10%;
-    width: 100%;
-    background-color: red;
-    display: block;
-    .columna {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+  // .header {
+  // }
   .nuxt {
     margin: 0;
     height: 90%;
