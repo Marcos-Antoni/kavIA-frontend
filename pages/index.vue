@@ -18,6 +18,9 @@
     <section id="desarroyadores">
       <BucarDesarroyadores class="contenedor" />
     </section>
+    <footer id="pie-de-pagina">
+      <footer-v />
+    </footer>
   </div>
 </template>
 
@@ -28,12 +31,26 @@ import Usuarios from "../components/inicio/Usuarios";
 import Integracion from "../components/inicio/Integracion";
 import Automatiza from "../components/inicio/Automatiza";
 import BucarDesarroyadores from "../components/inicio/BucarDesarroyadores";
-export default {};
+import FooterV from "../components/header/FooterV.vue";
+export default {
+  components: {
+    Inicio,
+    Popular,
+    Usuarios,
+    Integracion,
+    Automatiza,
+    BucarDesarroyadores,
+    FooterV
+  }
+};
 </script>
 <style lang="scss">
 .principal {
   height: 100%;
   background: var(--color);
+  position: relative;
+
+  margin-top: 20px;
 
   .contenedor {
     height: 100%;
@@ -59,6 +76,10 @@ export default {};
   }
   #desarroyadores {
     height: auto;
+  }
+  #pie-de-pagina {
+    height: auto;
+    width: 100%;
   }
 }
 </style>

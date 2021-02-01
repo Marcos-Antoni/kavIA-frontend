@@ -7,7 +7,9 @@
 
 <script>
 import HeaderV from "../components/header/HeaderV";
-export default {};
+export default {
+  components: { HeaderV }
+};
 </script>
 
 <style lang="scss">
@@ -48,8 +50,8 @@ body {
 }
 
 .contenedor {
-  // .header {
-  // }
+  /* .header {
+  } */
   .nuxt {
     margin: 0;
     height: 90%;
