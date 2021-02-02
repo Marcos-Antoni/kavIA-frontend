@@ -87,7 +87,7 @@ export default {
       height: 145px;
       top: 0;
       left: -25px;
-      background-image: url("/inicio/figuraIntegracion1.svg");
+      background-image: url("/figuraIntegracion1.svg");
     }
 
     &::before {

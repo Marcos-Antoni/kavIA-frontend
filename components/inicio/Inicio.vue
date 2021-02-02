@@ -54,7 +54,7 @@ export default {
     return {
       /* priemra-bista */
 
-      ejemplo_Iput: "Ejem:Inteligencia artificial para ventas"
+      ejemplo_Iput: "Ejem: Inteligencia artificial para ventas"
     };
   }
 };

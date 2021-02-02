@@ -66,6 +66,10 @@
   /* desarrolladores */
   // fin inicio
 
+  // buscador
+  /* buscador */
+  --tamano-de-buscador: 50%;
+
   /* lg */
   @media screen and (max-width: 1904px) {
     /* inicio */
@@ -116,6 +120,9 @@
 
     /* desarrolladores */
     --tamano-de-carta: auto;
+
+    /* buscador */
+    --tamano-de-buscador: 75%;
   }
   /* xs */
   @media screen and (max-width: 600px) {
