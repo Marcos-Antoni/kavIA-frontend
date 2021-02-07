@@ -38,6 +38,7 @@
   --contenido: "Helveltica";
   --tamano-h2-targeta-decorativa: 18px;
   --color-de-footer: #e2e2e2;
+  --color-de-buscador: #f8f8f8;
 
   // inicio
   /* inicio */
@@ -69,6 +70,15 @@
   // buscador
   /* buscador */
   --tamano-de-buscador: 50%;
+
+  /* componentes */
+  --separacion-de-boton-on-off: 20px;
+  --separacion-de-botones-de-lista: 20px;
+  --color-boton-de-componente: #949494;
+  --padding-de-botones-de-lista: 50px;
+  --left-pocicion: 43px;
+
+  // fin buscador
 
   /* lg */
   @media screen and (max-width: 1904px) {
@@ -123,6 +133,9 @@
 
     /* buscador */
     --tamano-de-buscador: 75%;
+
+    /* componentes */
+    --separacion-de-botones-de-lista: 0;
   }
   /* xs */
   @media screen and (max-width: 600px) {
@@ -134,5 +147,9 @@
 
     /* globales */
     --desaparecer-en-celulares-pequenos: none;
+
+    /* componentes */
+    --separacion-de-boton-on-off: 0px;
+    --padding-de-botones-de-lista: 0px;
   }
 }

@@ -7,7 +7,8 @@ export const state = () => ({
         "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
       puntuacion: 8.9,
       precio: 0.05,
-      verificar: "true"
+      usos: 75,
+      verificar: true
     },
     {
       img: "",
@@ -15,7 +16,7 @@ export const state = () => ({
       descripcion:
         "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
       puntuacion: 8.9,
-      precio: 0.05,
+      precio: 0,
       verificar: true
     },
     {
@@ -51,7 +52,7 @@ export const state = () => ({
       descripcion:
         "Identifica y previene fraude en tu negocio de manera rápida y sencilla",
       puntuacion: 8.9,
-      precio: 0.05,
+      precio: 0,
       verificar: false
     },
     {
@@ -63,5 +64,40 @@ export const state = () => ({
       precio: 0.05,
       verificar: false
     }
-  ]
+  ],
+  gratis: false,
+  verificado: 0
 });
+
+export const getters = {
+  listaDepurada(state) {
+    let listaDepurada = state.listPopulares
+      .filter(lista => {
+        if (state.gratis) {
+          return lista.precio == 0;
+        } else {
+          return lista;
+        }
+      })
+      .filter(lista => {
+        if (state.verificado < 1) {
+          return lista;
+        } else if (state.verificado == 1) {
+          return lista.verificar;
+        } else if (state.verificado > 1) {
+          return !lista.verificar;
+        }
+      });
+
+    return listaDepurada;
+  }
+};
+
+export const mutations = {
+  gratis_on_of(state, boolean) {
+    state.gratis = boolean;
+  },
+  modificar_verificacion(state, tipo) {
+    state.verificado = tipo;
+  }
+};

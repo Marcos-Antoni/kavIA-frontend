@@ -5,10 +5,7 @@
     </div>
     <v-container>
       <div class="titulo-del-obgeto">
-        <img
-          src="../../static/inicio/usuario.png"
-          class="imagen-del-desarrollador"
-        />
+        <img src="/usuario.png" class="imagen-del-desarrollador" />
 
         <h3 class="titulo titulo-h3">{{ obgeto.titulo }}</h3>
       </div>

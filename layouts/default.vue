@@ -7,6 +7,7 @@
 
 <script>
 import HeaderV from "../components/header/HeaderV";
+
 export default {
   components: { HeaderV }
 };

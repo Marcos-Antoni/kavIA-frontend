@@ -58,7 +58,7 @@ import { mapState } from "vuex";
 import Targetas from "../globales/Targetas";
 import TargetaDecoratiba from "../globales/TargetaDecoratiba";
 export default {
-  components: { TargetaDecoratiba },
+  components: { TargetaDecoratiba, Targetas },
   computed: {
     ...mapState(["listPopulares"])
   }

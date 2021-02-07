@@ -3,7 +3,7 @@ import colors from "vuetify/es5/util/colors";
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "%s - kav-frontend",
+    titleTemplate: "%s",
     title: "kav-frontend",
     meta: [
       { charset: "utf-8" },

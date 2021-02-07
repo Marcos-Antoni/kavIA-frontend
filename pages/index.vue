@@ -41,6 +41,9 @@ export default {
     Automatiza,
     BucarDesarroyadores,
     FooterV
+  },
+  head: {
+    title: "kav-frontend"
   }
 };
 </script>
