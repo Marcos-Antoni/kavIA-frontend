@@ -26,6 +26,10 @@ export default {
     @include titulo;
   }
   list-style-type: none;
+
+  // .row {
+  //   max-width: 100vw;
+  // }
 }
 .titulo {
   @include titulo;

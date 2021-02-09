@@ -6,15 +6,27 @@
     <section id="datos">
       <Datos :objeto="listPopulares[0]" />
     </section>
+    <v-row class="secciones">
+      <v-col cols="12" md="2">
+        <section id="menu-api">
+          <Navegacion />
+        </section>
+      </v-col>
+      <v-col cols="12" md="10">
+        <section>hola</section>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
 import Datos from "../../../components/api/Datos";
 import Descripcion from "../../../components/api/Descripcion";
+import Navegacion from "../../../components/api/Navegacion";
 import { mapState } from "vuex";
+
 export default {
-  components: { Descripcion, Datos },
+  components: { Descripcion, Datos, Navegacion },
 
   data() {
     return {
@@ -22,9 +34,19 @@ export default {
     };
   },
 
+  created() {
+    if (process.client) {
+      window.onscroll = e => {
+        // console.log(window.scrollY);
+      };
+    }
+  },
+
   computed: {
     ...mapState(["listPopulares"])
-  }
+  },
+
+  methods: {}
 };
 </script>
 
@@ -34,9 +56,21 @@ export default {
     height: auto;
     margin-top: 12px;
   }
+
   #datos {
     margin-top: -39px;
     height: auto;
+    max-width: 100vw;
+  }
+
+  .secciones {
+    height: auto;
+    margin-top: 25px;
+    max-width: 100vw;
+
+    #menu-api {
+      height: auto;
+    }
   }
 }
 </style>

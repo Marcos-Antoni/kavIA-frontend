@@ -1,6 +1,6 @@
 <template>
   <header class="arriba">
-    <v-row>
+    <v-row class="contenedor-arriba">
       <v-col cols="2" xl="1" class="columna-titulo">
         <v-btn @click.stop="drawer = !drawer" icon class="menu">
           <v-icon>mdi-menu</v-icon>
@@ -63,102 +63,107 @@ export default {
 .arriba {
   height: 53px;
   width: 100%;
+  // max-width: 100vw;
   display: block;
   background: #fff;
   box-shadow: 0 1px 10px #ccc;
 
-  .col {
-    padding-bottom: 0;
-  }
-  .col-xl-1 {
-    padding-bottom: 0;
-  }
+  .contenedor-arriba {
+    width: 100%;
 
-  .columna-titulo {
-    padding-left: var(--pading-header);
-    display: flex;
-    align-items: center;
-    @media screen and (max-width: 1904px) {
-      justify-content: flex-end;
+    .col {
+      padding-bottom: 0;
     }
-    @media screen and (max-width: 1264px) {
-      justify-content: flex-start;
+    .col-xl-1 {
+      padding-bottom: 0;
     }
-    .menu {
-      display: none;
-      @media screen and (max-width: 960px) {
-        display: block;
+
+    .columna-titulo {
+      padding-left: var(--pading-header);
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1904px) {
+        justify-content: flex-end;
+      }
+      @media screen and (max-width: 1264px) {
+        justify-content: flex-start;
+      }
+      .menu {
+        display: none;
+        @media screen and (max-width: 960px) {
+          display: block;
+        }
+      }
+      h1 {
+        font-size: 25px;
+      }
+      .logo {
+        padding-left: 10px;
       }
     }
-    h1 {
-      font-size: 25px;
-    }
-    .logo {
-      padding-left: 10px;
-    }
-  }
 
-  .columnas-lista {
-    display: flex;
-    align-items: center;
-
-    .navegacion {
-      width: 100%;
+    .columnas-lista {
       display: flex;
       align-items: center;
 
-      @media screen and (max-width: 960px) {
-        display: none;
-      }
-
-      .lista {
+      .navegacion {
         width: 100%;
         display: flex;
+        align-items: center;
 
-        li {
-          margin-right: 20px;
-          .link {
-            font-family: "Galano";
-            color: #090909;
-            text-decoration: none;
-            font-size: 14px;
+        @media screen and (max-width: 960px) {
+          display: none;
+        }
+
+        .lista {
+          width: 100%;
+          display: flex;
+
+          li {
+            margin-right: 20px;
+            .link {
+              font-family: "Galano";
+              color: #090909;
+              text-decoration: none;
+              font-size: 14px;
+            }
           }
         }
       }
     }
-  }
 
-  .columnas-login {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    .columnas-login {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-    .boton {
-      height: 75%;
-      margin-right: var(--margin-de-botones-de-header);
-      width: auto;
-      .v-btn__content {
-        font-weight: bold;
+      .boton {
+        height: 75%;
+        margin-right: var(--margin-de-botones-de-header);
+        width: auto;
+        .v-btn__content {
+          font-weight: bold;
+        }
+      }
+
+      .registro {
+        background-color: rgba(0, 45, 206, 0.06);
+        color: var(--color-azul);
+      }
+
+      .login {
+        background-color: var(--color-azul);
+        color: #fff;
       }
     }
 
-    .registro {
-      background-color: rgba(0, 45, 206, 0.06);
-      color: var(--color-azul);
-    }
-
-    .login {
-      background-color: var(--color-azul);
-      color: #fff;
-    }
-  }
-
-  .menu-oculto {
-    height: 10px;
-    .link {
-      color: #090909;
-      font-family: "Galano";
-      text-decoration: none;
+    .menu-oculto {
+      height: 10px;
+      .link {
+        color: #090909;
+        font-family: "Galano";
+        text-decoration: none;
+      }
     }
   }
 }

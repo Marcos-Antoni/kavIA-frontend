@@ -39,6 +39,7 @@
   --tamano-h2-targeta-decorativa: 18px;
   --color-de-footer: #e2e2e2;
   --color-de-buscador: #f8f8f8;
+  --color-boton-de-componente: #838383;
 
   // inicio
   /* inicio */
@@ -74,10 +75,11 @@
   /* componentes */
   --separacion-de-boton-on-off: 20px;
   --separacion-de-botones-de-lista: 20px;
-  --color-boton-de-componente: #949494;
   --padding-de-botones-de-lista: 50px;
   --left-pocicion: 43px;
 
+  /* navegacion */
+  --height-navegacionheight: 400px;
   // fin buscador
 
   /* lg */
@@ -103,7 +105,6 @@
     --ubicacion-de-palos-y: 20%;
 
     /* desarrolladores */
-    --tamano-de-carta: 250px;
   }
   /* sm */
   @media screen and (max-width: 960px) {
@@ -136,6 +137,8 @@
 
     /* componentes */
     --separacion-de-botones-de-lista: 0;
+
+    /* navegacion */
   }
   /* xs */
   @media screen and (max-width: 600px) {
