@@ -13,7 +13,9 @@
         </section>
       </v-col>
       <v-col cols="12" md="10">
-        <section>hola</section>
+        <section id="interfaz-api">
+          <InterfazGrafica />
+        </section>
       </v-col>
     </v-row>
   </div>
@@ -23,10 +25,11 @@
 import Datos from "../../../components/api/Datos";
 import Descripcion from "../../../components/api/Descripcion";
 import Navegacion from "../../../components/api/Navegacion";
+import InterfazGrafica from "../../../components/api/InterfazGrafica";
 import { mapState } from "vuex";
 
 export default {
-  components: { Descripcion, Datos, Navegacion },
+  components: { Descripcion, Datos, Navegacion, InterfazGrafica },
 
   data() {
     return {
@@ -69,6 +72,10 @@ export default {
     max-width: 100vw;
 
     #menu-api {
+      height: auto;
+    }
+
+    #interfaz-api {
       height: auto;
     }
   }

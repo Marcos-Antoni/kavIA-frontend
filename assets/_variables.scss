@@ -80,6 +80,10 @@
 
   /* navegacion */
   --height-navegacionheight: 400px;
+
+  /* Interfaz Grafica */
+  --tamano-de-pestanas-de-interfas: 80%;
+  --tamano-de-imagen-de-subida: 60px;
   // fin buscador
 
   /* lg */
@@ -154,5 +158,8 @@
     /* componentes */
     --separacion-de-boton-on-off: 0px;
     --padding-de-botones-de-lista: 0px;
+
+    /* Interfaz Grafica */
+    --tamano-de-pestanas-de-interfas: 100%;
   }
 }
