@@ -1,15 +1,22 @@
 <template>
   <div class="contenedor">
     <HeaderV class="header" />
+    <IniciarCecion v-show="login" />
     <nuxt class="nuxt" />
   </div>
 </template>
 
 <script>
 import HeaderV from "../components/header/HeaderV";
+import IniciarCecion from "../components/header/IniciarCesion";
+import { mapState } from "vuex";
 
 export default {
-  components: { HeaderV }
+  components: { HeaderV, IniciarCecion },
+
+  computed: {
+    ...mapState(["login"])
+  }
 };
 </script>
 

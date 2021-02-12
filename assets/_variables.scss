@@ -40,6 +40,9 @@
   --color-de-footer: #e2e2e2;
   --color-de-buscador: #f8f8f8;
   --color-boton-de-componente: #838383;
+  --color-de-files: #ececec;
+  --tamano-de-logo-de-red-social: 32px;
+  --tamano-delogin: 40%;
 
   // inicio
   /* inicio */
@@ -123,6 +126,7 @@
     --pading-header: 5px;
     --margin-de-botones-de-header: 5px;
     --tamano-de-footer: auto;
+    --tamano-delogin: 75%;
 
     /* usuarios */
     --tamano-de-imagen-de-usuario-x: 8rem;
@@ -154,6 +158,7 @@
 
     /* globales */
     --desaparecer-en-celulares-pequenos: none;
+    --tamano-delogin: 100%;
 
     /* componentes */
     --separacion-de-boton-on-off: 0px;

@@ -46,6 +46,7 @@ export default {
   .subir-contenido {
     width: var(--tamano-de-pestanas-de-interfas);
     height: 250px;
+    cursor: pointer;
 
     background: #83a4d4;
     background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);

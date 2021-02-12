@@ -66,7 +66,8 @@ export const state = () => ({
     }
   ],
   gratis: false,
-  verificado: 0
+  verificado: 0,
+  login: false
 });
 
 export const getters = {
@@ -97,7 +98,13 @@ export const mutations = {
   gratis_on_of(state, boolean) {
     state.gratis = boolean;
   },
+
   modificar_verificacion(state, tipo) {
     state.verificado = tipo;
+  },
+
+  on_of_login(state) {
+    state.login = !state.login;
+    console.log(state.login);
   }
 };

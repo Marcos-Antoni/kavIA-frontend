@@ -21,7 +21,7 @@
       </v-col>
       <v-col cols="6" class="columnas-login">
         <v-btn class="boton registro">registro</v-btn>
-        <v-btn class="boton login">login</v-btn>
+        <v-btn class="boton login" @click="loguiar">login</v-btn>
       </v-col>
     </v-row>
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -55,6 +55,13 @@ export default {
         { url: "#", nombre: "Soporte" }
       ]
     };
+  },
+  methods: {
+    loguiar() {
+      const { commit } = this.$store;
+
+      commit("on_of_login");
+    }
   }
 };
 </script>

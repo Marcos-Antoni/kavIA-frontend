@@ -69,7 +69,7 @@ export default {
 
     .input {
       .v-input__slot {
-        background-color: #ececec;
+        background-color: var(--color-de-files);
       }
     }
   }
