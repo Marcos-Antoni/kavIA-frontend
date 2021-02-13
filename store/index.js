@@ -105,6 +105,5 @@ export const mutations = {
 
   on_of_login(state) {
     state.login = !state.login;
-    console.log(state.login);
   }
 };
