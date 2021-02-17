@@ -11,7 +11,7 @@
       "
       @click="noSalir"
     >
-      <slot @click="noSalir"> </slot>
+      <slot> </slot>
     </div>
   </div>
 </template>
@@ -24,15 +24,18 @@ export default {
     return {
       comprobante: true,
       animacion1: "entrada1",
-      animacion2: "entrada2"
+      animacion2: "entrada2",
+      promesa: new Promise(res =>
+        setTimeout(() => {
+          console.log("funciona");
+          res();
+        }, 1000)
+      )
     };
   },
 
   async created() {
-    await setTimeout(() => {
-      console.log("hola");
-    }, 1000);
-    console.log("adios");
+    await this.promesa;
   },
 
   methods: {
@@ -48,14 +51,11 @@ export default {
           this.animacion1 = "entrada1";
           this.animacion2 = "entrada2";
         }, 500);
-
-        setTimeout(() => console.log("adios"), 3000);
-        console.log("hola");
       }
       this.comprobante = true;
     },
 
-    noSalir() {
+    async noSalir() {
       this.comprobante = !this.comprobante;
     }
   }

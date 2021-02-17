@@ -4,7 +4,7 @@
       <Descripcion :objeto="listPopulares[0]" />
     </section>
     <section id="datos">
-      <Datos :objeto="listPopulares[0]" />
+      <Datos :datos="dataSet" />
     </section>
     <v-row class="secciones">
       <v-col cols="12" md="2">
@@ -14,22 +14,26 @@
       </v-col>
       <v-col cols="12" md="10">
         <section id="interfaz-api">
-          <InterfazGrafica />
+          <InterfazGrafica v-show="menu == 0" />
         </section>
       </v-col>
     </v-row>
+    <footer>
+      <footer-v />
+    </footer>
   </div>
 </template>
 
 <script>
-import Datos from "../../../components/api/Datos";
-import Descripcion from "../../../components/api/Descripcion";
+import Datos from "../../../components/globales/Datos";
 import Navegacion from "../../../components/api/Navegacion";
+import FooterV from "../../../components/header/FooterV.vue";
+import Descripcion from "../../../components/api/Descripcion";
 import InterfazGrafica from "../../../components/api/InterfazGrafica";
 import { mapState } from "vuex";
 
 export default {
-  components: { Descripcion, Datos, Navegacion, InterfazGrafica },
+  components: { Descripcion, Datos, Navegacion, InterfazGrafica, FooterV },
 
   data() {
     return {
@@ -38,6 +42,8 @@ export default {
   },
 
   created() {
+    console.log(this.menu);
+
     if (process.client) {
       window.onscroll = e => {
         // console.log(window.scrollY);
@@ -46,7 +52,27 @@ export default {
   },
 
   computed: {
-    ...mapState(["listPopulares"])
+    ...mapState({
+      listPopulares: "listPopulares"
+    }),
+    menu() {
+      return this.$store.state.menus.api;
+    },
+
+    dataSet() {
+      return [
+        { mensage: "Estatus del servicio", subMensaje: "Activo" },
+        {
+          mensage: `Peticiones ${this.listPopulares[0].usos}`,
+          subMensaje: "Recianetes"
+        },
+        {
+          mensage: `$${this.listPopulares[0].precio} X`,
+          subMensaje: "Peticiones"
+        },
+        { mensage: "74% Crec.", subMensaje: "Mensual" }
+      ];
+    }
   },
 
   methods: {}
@@ -57,7 +83,6 @@ export default {
 .api {
   #descripcion {
     height: auto;
-    margin-top: 12px;
   }
 
   #datos {

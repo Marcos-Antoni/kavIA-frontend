@@ -67,6 +67,7 @@ body {
   .nuxt {
     margin: 0;
     height: 90%;
+    z-index: 1;
   }
 }
 </style>

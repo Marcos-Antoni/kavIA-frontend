@@ -35,14 +35,11 @@
 
 <script>
 import Targetas from "../globales/Targetas";
+/* funciones */
+import FunG from "../funciones/globales";
+
 export default {
   components: { Targetas },
-
-  computed: {
-    lista() {
-      return this.$store.getters.listaDepurada;
-    }
-  },
 
   data() {
     return {
@@ -53,6 +50,12 @@ export default {
         { nombre: "Sin Verificados", encender: false }
       ]
     };
+  },
+
+  computed: {
+    lista() {
+      return this.$store.getters.listaDepurada;
+    }
   },
 
   methods: {
@@ -68,13 +71,12 @@ export default {
     },
 
     actibar_boton(ubicacion) {
-      this.lista_Botones = this.lista_Botones.map(boton => {
-        boton.encender = false;
-        return boton;
-      });
-      this.lista_Botones[ubicacion].encender = true;
-
       const { commit } = this.$store;
+
+      this.lista_Botones = FunG.activar_desactibar_estilos(
+        this.lista_Botones,
+        ubicacion
+      );
 
       commit("modificar_verificacion", ubicacion);
     }

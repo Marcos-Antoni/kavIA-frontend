@@ -31,7 +31,7 @@
         </v-expansion-panels>
       </v-col>
       <v-col md="2" cols="12" class="centrado">
-        <img src="visa.svg" />
+        <img src="/visa.svg" />
       </v-col>
     </v-row>
   </div>

@@ -74,6 +74,7 @@ export default {
   display: block;
   background: #fff;
   box-shadow: 0 1px 10px #ccc;
+  z-index: 15;
 
   .contenedor-arriba {
     width: 100%;

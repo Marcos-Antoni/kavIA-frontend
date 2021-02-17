@@ -11,19 +11,20 @@
       </form>
     </div>
 
-    <div class="bajar-contenido">
-      <v-card class="bajar-titulo">
-        <h2>Response</h2>
-      </v-card>
-      <v-card class="bajar-respuesta">
-        <p>waiting response...</p>
-      </v-card>
-    </div>
+    <BajarContenido class="bajar-contenido">
+      <template #respuesta>
+        <div class="respuesta">
+          <p>waiting response...</p>
+        </div>
+      </template>
+    </BajarContenido>
   </div>
 </template>
 
 <script>
+import BajarContenido from "../globales/BajarContenido";
 export default {
+  components: { BajarContenido },
   methods: {
     subirArchibos() {
       const file = document.querySelector("#subir-file");
@@ -75,32 +76,7 @@ export default {
   }
 
   .bajar-contenido {
-    width: var(--tamano-de-pestanas-de-interfas);
-    height: 800px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    .bajar-titulo {
-      width: 100%;
-      height: 5%;
-      border-radius: 0;
-      padding-left: 10px;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-
-      h2 {
-        font-size: 19px;
-      }
-    }
-
-    .bajar-respuesta {
-      width: 100%;
-      height: 95%;
-      border-radius: 0%;
-      background: #f0f0f0;
-      z-index: 1;
-
+    .respuesta {
       display: flex;
       align-items: center;
       justify-content: center;

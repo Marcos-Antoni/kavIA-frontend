@@ -20,20 +20,7 @@
 
 <script>
 export default {
-  props: {
-    objeto: Object
-  },
-
-  data() {
-    return {
-      datos: [
-        { mensage: "Estatus del servicio", subMensaje: "Activo" },
-        { mensage: `Peticiones ${this.objeto.usos}`, subMensaje: "Recianetes" },
-        { mensage: `$${this.objeto.precio} X`, subMensaje: "Peticiones" },
-        { mensage: "74% Crec.", subMensaje: "Mensual" }
-      ]
-    };
-  }
+  props: ["datos"]
 };
 </script>
 
