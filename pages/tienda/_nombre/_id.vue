@@ -15,6 +15,7 @@
       <v-col cols="12" md="10">
         <section id="interfaz-api">
           <InterfazGrafica v-show="menu == 0" />
+          <Conexion v-show="menu == 1" />
         </section>
       </v-col>
     </v-row>
@@ -30,10 +31,19 @@ import Navegacion from "../../../components/api/Navegacion";
 import FooterV from "../../../components/header/FooterV.vue";
 import Descripcion from "../../../components/api/Descripcion";
 import InterfazGrafica from "../../../components/api/InterfazGrafica";
+import Conexion from "../../../components/api/Conexion";
 import { mapState } from "vuex";
 
 export default {
-  components: { Descripcion, Datos, Navegacion, InterfazGrafica, FooterV },
+  components: {
+    Descripcion,
+    Datos,
+    Navegacion,
+    InterfazGrafica,
+    Conexion,
+    FooterV,
+    Conexion
+  },
 
   data() {
     return {

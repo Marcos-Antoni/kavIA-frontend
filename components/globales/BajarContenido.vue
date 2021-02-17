@@ -2,13 +2,25 @@
   <div class="bajar-contenido" :style="`height: ${tamano ? tamano : ` 800px`}`">
     <v-card
       class="bajar-titulo"
-      :style="`height: ${TamTitulo ? TamTitulo : `7`}%`"
+      :style="
+        `height: ${TamTitulo ? TamTitulo : `7`}%;
+      display:${TamTitulo != `0` ? `flex` : `none`}
+      `
+      "
     >
       <slot name="titulo">
-        <h2>Response</h2>
+        <h2 class="h2-titulo">Response</h2>
       </slot>
     </v-card>
-    <v-card class="bajar-tipo" :style="`height: ${TamTipo ? TamTipo : `7`}%`">
+
+    <v-card
+      class="bajar-tipo"
+      :style="
+        `height: ${TamTipo ? TamTipo : `7`}%;
+    display:${TamTipo != `0` ? `flex` : `none`}
+    `
+      "
+    >
       <slot name="tipo">
         <ul class="listado-tipo">
           <li
@@ -22,10 +34,16 @@
         </ul>
       </slot>
     </v-card>
+
     <v-card
       class="bajar-respuesta"
-      :style="`height: ${TamRespuesta ? TamRespuesta : `86`}%`"
+      :style="
+        `height: ${TamRespuesta ? TamRespuesta : `86`}%;
+      display:${TamRespuesta != `0` ? `flex` : `none`}
+      `
+      "
     >
+      {{ TamTipo }}
       <slot name="respuesta"> </slot>
     </v-card>
   </div>
@@ -96,7 +114,7 @@ export default {
     display: flex;
     align-items: center;
 
-    h2 {
+    .h2-titulo {
       font-size: 19px;
     }
   }

@@ -32,6 +32,9 @@ export default {
   h2 {
     @include titulo;
   }
+  h3 {
+    @include titulo;
+  }
   list-style-type: none;
 
   // .row {
