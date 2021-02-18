@@ -155,7 +155,7 @@ export default {
       }
 
       .registro {
-        background-color: rgba(0, 45, 206, 0.06);
+        background-color: var(--color-boton-azul);
         color: var(--color-azul);
       }
 

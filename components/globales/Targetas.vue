@@ -1,8 +1,8 @@
 <template>
-  <v-card class="obgeto-de-lista liston">
-    <div :class="obgeto.verificar ? `verificar` : `desaparecer`">
-      <v-icon color="red lighten-5">mdi-check</v-icon>
-    </div>
+  <v-card
+    class="obgeto-de-lista liston"
+    :class="obgeto.verificar ? `verificar` : ``"
+  >
     <v-container>
       <div class="titulo-del-obgeto">
         <img src="/usuario.png" class="imagen-del-desarrollador" />
@@ -34,6 +34,12 @@ export default {
 </script>
 
 <style lang="scss">
+@mixin affter {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
 .liston {
   &::before {
     position: absolute;
@@ -47,26 +53,23 @@ export default {
   }
 }
 
+.verificar {
+  &::after {
+    @include affter();
+    background-image: url(/verificado.svg);
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    left: -3%;
+    top: -3%;
+  }
+}
+
 .obgeto-de-lista {
   height: 250px;
   width: 100%;
   position: relative;
 
-  .verificar {
-    position: absolute;
-    display: block;
-    text-align: center;
-    background-color: var(--color-azul);
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    left: -3%;
-    top: -3%;
-    color: #ffffff;
-  }
-  .desaparecer {
-    display: none;
-  }
   .titulo-del-obgeto {
     height: 30%;
     display: flex;
@@ -109,7 +112,18 @@ export default {
     justify-content: space-between;
 
     .puntuacion {
+      position: relative;
+      margin-left: 10px;
       color: #868686;
+      &::after {
+        @include affter();
+        background-image: url(/puntuacion.svg);
+        background-size: 20px;
+        width: 20px;
+        height: 20px;
+        left: -20px;
+        top: 0%;
+      }
     }
 
     .precio {

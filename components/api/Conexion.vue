@@ -45,6 +45,12 @@
       </template>
     </BajarContenido>
 
+    <div class="lista-botones">
+      <v-btn v-for="nombre in lista_botones" :key="nombre" class="boton">
+        {{ nombre }}
+      </v-btn>
+    </div>
+
     <BajarContenido class="conexion-bajar">
       <template #respuesta>
         <div class="respuesta">
@@ -60,7 +66,9 @@ import BajarContenido from "../globales/BajarContenido";
 export default {
   components: { BajarContenido },
   data() {
-    return {};
+    return {
+      lista_botones: ["NodeJs", "Axios", "Jquery"]
+    };
   }
 };
 </script>
@@ -158,6 +166,20 @@ export default {
         // top: 0;
         left: 0;
       }
+    }
+  }
+
+  .lista-botones {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .boton {
+      background-color: var(--color-boton-azul);
+      width: 100px;
+      color: var(--color-azul);
+      font-weight: bold;
+      font-family: "Helveltica";
     }
   }
 
