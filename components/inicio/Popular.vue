@@ -3,26 +3,17 @@
     <v-container>
       <h2>Más vendidos</h2>
       <p>las inteligencias artificiales mas vendidas de la plataforma</p>
-      <v-row class="lista-de-populares">
-        <v-col
-          class="columna-de-obgeto"
-          v-for="(obgeto, key) in listPopulares"
-          :key="key"
-          md="3"
-          sm="6"
-          cols="12"
-        >
-          <Targetas :obgeto="obgeto" />
-        </v-col>
-      </v-row>
+
+      <ListaTargetas class="lista-de-populares" :lista="listPopulares" />
     </v-container>
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
-import Targetas from "../globales/Targetas";
+import ListaTargetas from "../globales/ListaTargetas";
+
 export default {
-  components: { Targetas },
+  components: { ListaTargetas },
   name: "Popular",
 
   computed: {
@@ -41,7 +32,7 @@ export default {
   margin-top: 20px;
 
   .lista-de-populares {
-    padding: 20px 7%;
+    padding-top: 20px;
   }
 }
 </style>

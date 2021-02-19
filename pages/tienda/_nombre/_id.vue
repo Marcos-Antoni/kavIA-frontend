@@ -29,7 +29,7 @@
 import Datos from "../../../components/globales/Datos";
 import Navegacion from "../../../components/api/Navegacion";
 import FooterV from "../../../components/header/FooterV.vue";
-import Descripcion from "../../../components/api/Descripcion";
+import Descripcion from "../../../components/globales/Descripcion";
 import InterfazGrafica from "../../../components/api/InterfazGrafica";
 import Conexion from "../../../components/api/Conexion";
 import { mapState } from "vuex";

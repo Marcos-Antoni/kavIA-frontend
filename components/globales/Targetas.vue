@@ -27,9 +27,7 @@
 <script>
 export default {
   name: "Targeta",
-  props: {
-    obgeto: Object
-  }
+  props: ["obgeto"]
 };
 </script>
 

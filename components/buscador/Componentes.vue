@@ -17,29 +17,18 @@
     </v-row>
 
     <v-container class="contenedor-componente">
-      <v-row class="componentes-abajo">
-        <v-col
-          class="columna-de-obgeto"
-          v-for="(obgeto, key) in lista"
-          :key="key"
-          md="3"
-          sm="6"
-          cols="12"
-        >
-          <Targetas :obgeto="obgeto" />
-        </v-col>
-      </v-row>
+      <ListaTargetas :lista="lista" />
     </v-container>
   </div>
 </template>
 
 <script>
-import Targetas from "../globales/Targetas";
+import ListaTargetas from "../globales/ListaTargetas";
 /* funciones */
 import FunG from "../funciones/globales";
 
 export default {
-  components: { Targetas },
+  components: { ListaTargetas },
 
   data() {
     return {

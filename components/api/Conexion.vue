@@ -176,7 +176,7 @@ export default {
 
     .boton {
       background-color: var(--color-boton-azul);
-      width: 100px;
+      width: 200px;
       color: var(--color-azul);
       font-weight: bold;
       font-family: "Helveltica";
