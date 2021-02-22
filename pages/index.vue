@@ -42,6 +42,7 @@ export default {
     BucarDesarroyadores,
     FooterV
   },
+
   head: {
     title: "kav-frontend"
   }
